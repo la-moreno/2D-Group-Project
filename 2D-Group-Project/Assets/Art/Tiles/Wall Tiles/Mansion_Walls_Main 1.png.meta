@@ -1,31 +1,46 @@
 fileFormatVersion: 2
-guid: a4690b503e32fcc4b9722c74eee487c0
+guid: aee8efe2b55817448bc937079d7030f1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3776536943958790019
-    second: TestRULETiles_0
+      213: -3840086916949254049
+    second: Mansion_Walls_Main 1_0
   - first:
-      213: 3745360844342704552
-    second: TestRULETiles_1
+      213: 6876627883448137318
+    second: Mansion_Walls_Main 1_1
   - first:
-      213: -8059846076285920137
-    second: TestRULETiles_2
+      213: 2216311645455862318
+    second: Mansion_Walls_Main 1_2
   - first:
-      213: -3038108850788246231
-    second: TestRULETiles_3
+      213: -6686955379390225179
+    second: Mansion_Walls_Main 1_3
   - first:
-      213: -6644968396139660424
-    second: TestRULETiles_4
+      213: 4545431740797115729
+    second: Mansion_Walls_Main 1_4
   - first:
-      213: -2848093155847827744
-    second: TestRULETiles_5
+      213: -6467156303734117518
+    second: Mansion_Walls_Main 1_5
   - first:
-      213: -3820238069542257774
-    second: TestRULETiles_6
+      213: 1861988560918622089
+    second: Mansion_Walls_Main 1_6
   - first:
-      213: -1197414240133982383
-    second: TestRULETiles_7
+      213: 5615003997114117768
+    second: Mansion_Walls_Main 1_7
+  - first:
+      213: -158969109683386888
+    second: Mansion_Walls_Main 1_8
+  - first:
+      213: -3158110476375348150
+    second: Mansion_Walls_Main 1_9
+  - first:
+      213: -896477345930122953
+    second: Mansion_Walls_Main 1_10
+  - first:
+      213: 3227250650160193213
+    second: Mansion_Walls_Main 1_11
+  - first:
+      213: -6740071710160347590
+    second: Mansion_Walls_Main 1_12
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -106,11 +121,149 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TestRULETiles_0
+      name: Mansion_Walls_Main 1_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70e57cbfd64f7a4bb3f3a69f757fe59
+      internalID: -3840086916949254049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mansion_Walls_Main 1_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3936c16523f289a4f95bc6a462e9619f
+      internalID: 6876627883448137318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mansion_Walls_Main 1_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5b93c0f83e0f540809d3ef0f2e6e09
+      internalID: 2216311645455862318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mansion_Walls_Main 1_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1da6b8329abd2d40918208f6027a238
+      internalID: -6686955379390225179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mansion_Walls_Main 1_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd676f897e6ee64d8f5a9bcf07e7844
+      internalID: 4545431740797115729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mansion_Walls_Main 1_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71e816637bb7eb41bf1b2ae6eee40d0
+      internalID: -6467156303734117518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mansion_Walls_Main 1_6
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +277,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c31a1b926ebaefa47a8195155860811a
-      internalID: -3776536943958790019
+      spriteID: a3b239063c96d9749a0f7cdade62a42d
+      internalID: 1861988560918622089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TestRULETiles_1
+      name: Mansion_Walls_Main 1_7
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +298,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd664156655a5ea4ca8dcafb552e0006
-      internalID: 3745360844342704552
+      spriteID: 67291d310af9a854cb0944dd6f7f3691
+      internalID: 5615003997114117768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TestRULETiles_2
+      name: Mansion_Walls_Main 1_8
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +319,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcec19b679726054180fb6893948234a
-      internalID: -8059846076285920137
+      spriteID: 84e953f3a6af02f44998a3a1db932c8b
+      internalID: -158969109683386888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TestRULETiles_3
+      name: Mansion_Walls_Main 1_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489c05376087ad74a9a0eaf86886ec5f
+      internalID: -3158110476375348150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mansion_Walls_Main 1_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afcf2b6dd4352604fb970472b7dd9cc2
+      internalID: -896477345930122953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mansion_Walls_Main 1_11
       rect:
         serializedVersion: 2
         x: 0
@@ -187,17 +382,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc8301e5ae96aaf479c0a577cbd237ac
-      internalID: -3038108850788246231
+      spriteID: 5551928341b013546a1fd16fd05c9da9
+      internalID: 3227250650160193213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TestRULETiles_4
+      name: Mansion_Walls_Main 1_12
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 32
         width: 32
         height: 32
@@ -208,71 +403,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd64ad840022ada4585ff772baa92e96
-      internalID: -6644968396139660424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TestRULETiles_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dedc2d4e908f1a045a8484159357cfb5
-      internalID: -2848093155847827744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TestRULETiles_6
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2481c1620779bd242a33748901f2ce04
-      internalID: -3820238069542257774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TestRULETiles_7
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6cc4b36b3acce644ea5456753a534fa5
-      internalID: -1197414240133982383
+      spriteID: 6f5de9a17d211c8449391610a03d236f
+      internalID: -6740071710160347590
       vertices: []
       indices: 
       edges: []
