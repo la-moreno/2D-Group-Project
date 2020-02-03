@@ -17,6 +17,13 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;          //Drag and drop the rigidbody to the script rb field
 
 
+    //For animating
+    public Animator animator;
+
+    float horizontalMove = 0f;
+    public float runSpeed = 1f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +36,10 @@ public class PlayerController : MonoBehaviour
         //So inputs are processed in every frame
         ProcessInputs();
         Move();
+
+        //For animation
+        horizontalMove = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("Speed", horizontalMove);
     }
 
     //for handling input
