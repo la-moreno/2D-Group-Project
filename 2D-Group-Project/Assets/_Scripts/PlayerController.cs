@@ -11,10 +11,14 @@ public class PlayerController : MonoBehaviour
     public Vector2 movementDirection;
 
     //For speed (the further the stick is pushed the faster the character moves)
-    public float movementSpeed;
+    public float movementSpeed = 1f;
 
     //To access rigidbody
     public Rigidbody2D rb;          //Drag and drop the rigidbody to the script rb field
+
+    //-----------------------------------------------------
+    //For keyboard movement
+    Vector2 keyMovement;
 
 
     //For animating
@@ -35,20 +39,35 @@ public class PlayerController : MonoBehaviour
     {
         //So inputs are processed in every frame
         ProcessInputs();
-        Move();
+        
 
         //For animation
         horizontalMove = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", horizontalMove);
     }
+    //-------------------------------------keyboard
+    void FixedUpdate()
+    {
+        Move();
+
+        rb.MovePosition(rb.position + keyMovement * movementSpeed);
+    }
 
     //for handling input
     void ProcessInputs()
     {
+        //Game controller
         //Apply values to movementDirection based on player input
         movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        movementSpeed = Mathf.Clamp(movementDirection.magnitude, 0.0f, 1.0f);           //Clamp controller input at 0 through 1
+        movementSpeed = Mathf.Clamp(movementDirection.magnitude, 0.0f, .1f);           //Clamp controller input at 0 through 1
         movementDirection.Normalize();
+
+
+
+        //----------------------keyboard
+        keyMovement.x = Input.GetAxisRaw("Horizontal");
+        keyMovement.y = Input.GetAxisRaw("Vertical");
+
     }
 
 
