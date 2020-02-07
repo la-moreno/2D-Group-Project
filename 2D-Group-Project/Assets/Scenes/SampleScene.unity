@@ -13577,10 +13577,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0.04482758
-    width: 1
-    height: 0.91034484
+    x: 0.00080001354
+    y: 0.090316564
+    width: 0.9984
+    height: 0.8193669
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -16495,6 +16495,116 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[0].name
+      value: Cleaning
+      objectReference: {fileID: 0}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[0].Chip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e5ae248d4ae34e4d974266e96ed6090, type: 3}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[0].Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[1].Chip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8783495438d9aa44e9325a43ce810ee4, type: 3}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: FootSteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.543
+      objectReference: {fileID: 0}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[2].Chip
+      value: 
+      objectReference: {fileID: 8300000, guid: 764becd04b6f12143b622411436b6275, type: 3}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: Glass_Break
+      objectReference: {fileID: 0}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[3].Chip
+      value: 
+      objectReference: {fileID: 8300000, guid: d0c4ec45b49a97e40947fb9e07da7719, type: 3}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: Monster_Footsteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[4].Chip
+      value: 
+      objectReference: {fileID: 8300000, guid: 026fc805845df684282eaa21cb21dfe2, type: 3}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: Mosnter_Yell
+      objectReference: {fileID: 0}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[5].Chip
+      value: 
+      objectReference: {fileID: 8300000, guid: aec389ffc94474949b5ee70417827bc0, type: 3}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[5].name
+      value: Pot_Breaking
+      objectReference: {fileID: 0}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[6].Chip
+      value: 
+      objectReference: {fileID: 8300000, guid: a39502aa37bf7c1469d222ba10ed3c3a, type: 3}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: Squeeky_floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
+        type: 3}
+      propertyPath: sounds.Array.data[1].Loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 703675829898900515, guid: 4614c5e70eeb2c64ba404859c4573e30,
         type: 3}
       propertyPath: m_LocalPosition.x

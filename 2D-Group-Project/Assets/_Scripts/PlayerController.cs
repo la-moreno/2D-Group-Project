@@ -27,6 +27,9 @@ public class PlayerController : MonoBehaviour
     float horizontalMove = 0f;
     public float runSpeed = 1f;
 
+    //For soundFX
+    float StepInterval = 0.0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -62,7 +65,15 @@ public class PlayerController : MonoBehaviour
         movementSpeed = Mathf.Clamp(movementDirection.magnitude, 0.0f, .1f);           //Clamp controller input at 0 through 1
         movementDirection.Normalize();
 
-
+        //Playing the walking sound(JOEL)
+        if(movementSpeed > 0)
+        {
+            if (StepInterval < Time.time)
+            {
+                FindObjectOfType<AudioManger>().Play("FootSteps");
+                StepInterval = Time.time + 0.4f;
+            }
+        }
 
         //----------------------keyboard
         keyMovement.x = Input.GetAxisRaw("Horizontal");
