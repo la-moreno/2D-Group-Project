@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     float horizontalMove = 0f;
+    float verticalMove = 0f;
     public float runSpeed = 1f;
 
     //For soundFX
@@ -45,8 +46,13 @@ public class PlayerController : MonoBehaviour
         
 
         //For animation
+        //Horizontal move
         horizontalMove = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", horizontalMove);
+
+        //Vertical move
+        verticalMove = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("VerticalSpeed", verticalMove);
     }
     //-------------------------------------keyboard
     void FixedUpdate()
