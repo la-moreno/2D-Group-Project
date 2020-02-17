@@ -63,10 +63,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Scripts\Pathfinding Scripts\Heap.cs" />
+    <Compile Include="Assets\_Scripts\Pathfinding Scripts\Node.cs" />
+    <Compile Include="Assets\_Scripts\Pathfinding Scripts\Pathfinding.cs" />
+    <Compile Include="Assets\_Scripts\Pathfinding Scripts\PathFindingGrid.cs" />
+    <Compile Include="Assets\_Scripts\Pathfinding Scripts\PathRequestManager.cs" />
+    <Compile Include="Assets\_Scripts\Pathfinding Scripts\Unit.cs" />
     <Compile Include="Assets\_Scripts\PlayerController.cs" />
     <Compile Include="Assets\Art\Tiles\RailNode.cs" />
     <Compile Include="Assets\Monster_Controller.cs" />
-    <Compile Include="Assets\PathFindingGrid.cs" />
     <Compile Include="Assets\Sounds\AudioManger.cs" />
     <Compile Include="Assets\Sounds\Sounds.cs" />
     <Compile Include="Assets\Wolv Interactive\Pixel Perfect Retro Camera\Scenes\Example\MoveCamera.cs" />
