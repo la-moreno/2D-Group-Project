@@ -14,9 +14,10 @@ public class PlayerAttack : MonoBehaviour
 
     private Animator anim;
 
-
+    //called at the start
     void Awake()
     {
+        //Disable collider
         anim = gameObject.GetComponent<Animator>();
         attackTrigger.enabled = false;
     }
@@ -25,13 +26,13 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         //If key pressed and not attacking
-        if(Input.GetKeyDown("f") && !attacking)
+        if(Input.GetKeyDown("f") /*&& !attacking*/)
         {
             attacking = true;
             attackTimer = attackCoolDown;
 
             attackTrigger.enabled = true;
-            Debug.Log("attack");
+            Debug.Log("attacking");
         }
 
         if(attacking)
