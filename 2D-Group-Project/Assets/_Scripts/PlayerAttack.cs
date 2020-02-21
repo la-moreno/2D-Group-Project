@@ -31,6 +31,7 @@ public class PlayerAttack : MonoBehaviour
             attacking = true;
             attackTimer = attackCoolDown;
 
+            FindObjectOfType<AudioManger>().Play("Cleaning"); //check
             attackTrigger.enabled = true;
             Debug.Log("attacking");
         }
