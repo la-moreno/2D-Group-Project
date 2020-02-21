@@ -26,11 +26,12 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         //If key pressed and not attacking
-        if(Input.GetKeyDown("f") && !attacking)
+        if(Input.GetKeyDown("f") /*&& !attacking*/)
         {
             attacking = true;
             attackTimer = attackCoolDown;
 
+            FindObjectOfType<AudioManger>().Play("Cleaning"); //check
             attackTrigger.enabled = true;
             Debug.Log("attacking");
         }
