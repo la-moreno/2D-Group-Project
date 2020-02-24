@@ -56,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\AttackTrigger.cs" />
+     <Compile Include="Assets\_Scripts\Inventory Scripts\Inventory.cs" />
+     <Compile Include="Assets\_Scripts\Inventory Scripts\InventorySlot.cs" />
+     <Compile Include="Assets\_Scripts\Inventory Scripts\InventoryUI.cs" />
+     <Compile Include="Assets\_Scripts\Inventory Scripts\Item.cs" />
+     <Compile Include="Assets\_Scripts\Inventory Scripts\ItemPickup.cs" />
+     <Compile Include="Assets\_Scripts\Inventory Scripts\PickUpAndHoldItem.cs" />
      <Compile Include="Assets\_Scripts\Pathfinding Scripts\Heap.cs" />
      <Compile Include="Assets\_Scripts\Pathfinding Scripts\Node.cs" />
      <Compile Include="Assets\_Scripts\Pathfinding Scripts\Pathfinding.cs" />
