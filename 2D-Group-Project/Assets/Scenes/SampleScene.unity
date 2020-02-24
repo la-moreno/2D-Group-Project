@@ -13963,10 +13963,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0003965199
-    y: 0.120034546
-    width: 0.99920696
-    height: 0.7599309
+    x: 0
+    y: 0.11130741
+    width: 1
+    height: 0.7773852
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -14014,6 +14014,7 @@ GameObject:
   - component: {fileID: 540390170}
   - component: {fileID: 540390174}
   - component: {fileID: 540390173}
+  - component: {fileID: 540390175}
   m_Layer: 9
   m_Name: Monster_Walk_0
   m_TagString: Untagged
@@ -14138,6 +14139,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &540390175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540390169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e20e6c04734f747aa3526c5c70e9ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumOfMesses: 0
+  Messes: []
 --- !u!1001 &546992768
 PrefabInstance:
   m_ObjectHideFlags: 0
