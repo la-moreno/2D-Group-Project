@@ -71,8 +71,7 @@ public class MessSpawn : MonoBehaviour
 
     Vector3 RandomMessPos()
     {
-        Vector3 MessSpawnPoint = new Vector3(Random.Range(transform.position.x, transform.position.x),
-                                            Random.Range(transform.position.y, transform.position.y), 0);
+        Vector3 MessSpawnPoint = new Vector3(transform.position.x, transform.position.y, 0);
         return MessSpawnPoint; 
     }
      
