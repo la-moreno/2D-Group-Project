@@ -14152,7 +14152,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumOfMesses: 0
-  Messes: []
+  Messes:
+  - {fileID: 8921140800659279674, guid: f0fd71bc84edfe7438f2216d411eec05, type: 3}
+  - {fileID: 5751283433653467865, guid: 5543a780d65b42143b29ef349e5f30a5, type: 3}
+  - {fileID: 8746058662535012139, guid: 4d5170050ac72644c9615f73b7afd3a9, type: 3}
 --- !u!1001 &546992768
 PrefabInstance:
   m_ObjectHideFlags: 0
