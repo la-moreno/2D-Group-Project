@@ -14016,9 +14016,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.15189874
+    y: 0.1535433
     width: 1
-    height: 0.6962025
+    height: 0.6929134
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -14138,11 +14138,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34b7b6ca698f7c41afc41e0c5c31ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 318287676}
+  player: {fileID: 318287676}
   speed: 200
   nextWaypointDistance: 3
   enemyGFX: {fileID: 157984458}
-  animator: {fileID: 157984460}
 --- !u!114 &540390175
 MonoBehaviour:
   m_ObjectHideFlags: 0

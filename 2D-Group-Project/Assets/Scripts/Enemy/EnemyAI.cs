@@ -8,22 +8,26 @@ public class EnemyAI : MonoBehaviour
 {
     enum MonsterState
     {
+        idle,
         wander,
-        pursue
+        pursue_player
     }
-    MonsterState state;
 
-    public Transform target;
+    MonsterState state;
+    MonsterState currentState;
+
+    public Transform player;
     public float speed = 200;
     public float nextWaypointDistance = 3f;
 
-    public Transform enemyGFX;
-    public Animator animator;
+    // Transform of animated object for monster
+    public Transform enemyGFX;  
 
     Path path; // current path we are following 
-    int currentWaypoint = 0;
-    bool reachedEndOfPath = false;
 
+    // Variables for pathfinding
+    int currentWaypoint = 0;
+    bool reachedEndOfPath = true;
 
     Seeker seeker;
     Rigidbody2D rb;
@@ -32,44 +36,68 @@ public class EnemyAI : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-
-        //InvokeRepeating("UpdatePath", 0f, 3f);
-        state = MonsterState.wander;
+        
+        //Initialize behaviors
+        currentState = MonsterState.idle;
+        state = MonsterState.pursue_player;
     }
 
     void Update()
     {
-        switch (state)
+        // Switch to new state if the state has changed
+        if (state != currentState)
         {
-            case MonsterState.wander:
-                StartCoroutine(Wander(1.0f));
-                break;
+            currentState = state;
+            switch (state)
+            {
+                case MonsterState.wander:
+                    StartCoroutine(Wander(1.0f));
+                    break;
+                case MonsterState.pursue_player:
+                    StartCoroutine(Pursue(0.5f, player));
+                    break;
+            }
         }
     }
 
+    // Wanders randomly around the map
     IEnumerator Wander(float interval)
     {
+        Vector2 randPosition;
+
         while (state == MonsterState.wander)
         {
-            if (path != null)
+            if (reachedEndOfPath == true)
             {
-                if (currentWaypoint == path.vectorPath.Count - 1)
-                    StartCoroutine(UpdatePath(3.0f));
-            }
-            else
-                StartCoroutine(UpdatePath(1.0f));
+                randPosition = new Vector2(Random.Range(-40f, 40f), Random.Range(-40f, 40f));
 
+                yield return new WaitForSeconds(interval);
+                UpdatePath(randPosition);
+            }
             yield return new WaitForSeconds(0.0f);
         }
     }
 
-    IEnumerator UpdatePath(float interval)
+    // Pursues the given target
+    IEnumerator Pursue(float interval, Transform target)
     {
-        yield return new WaitForSeconds(interval);
-        if (seeker.IsDone())
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
+        while (state == MonsterState.pursue_player)
+        {
+            UpdatePath(target.position);
+
+            yield return new WaitForSeconds(interval);
+        }
     }
 
+    // Find a path
+    void UpdatePath(Vector3 destination)
+    {
+        if (seeker.IsDone())
+            seeker.StartPath(rb.position, destination, OnPathComplete);
+        Debug.Log("Path started");
+    }
+
+    // Set found path as current path
     void OnPathComplete(Path p)
     {
         // Make sure there were no errors finding a path
@@ -79,9 +107,16 @@ public class EnemyAI : MonoBehaviour
             path = p;
             currentWaypoint = 0;
         }
+        
     }
 
     void FixedUpdate()
+    {
+        MonsterMovement();
+    }
+
+    // Move along the path
+    void MonsterMovement()
     {
         if (path == null)
             return;
@@ -93,15 +128,14 @@ public class EnemyAI : MonoBehaviour
         }
         else
             reachedEndOfPath = false;
-
+        
+        // Add a force in the direction of the current waypoint
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-
         Vector2 force = direction * speed * Time.deltaTime;
-
         rb.AddForce(force);
 
+        // Increment to the next waypoint when we reach the current one
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
-
         if (distance < nextWaypointDistance)
             currentWaypoint++;
 
@@ -110,7 +144,5 @@ public class EnemyAI : MonoBehaviour
             enemyGFX.localScale = new Vector3(1f, 1f, 1f);
         else if (rb.velocity.x <= -0.1f)
             enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
-
-
     }
 }

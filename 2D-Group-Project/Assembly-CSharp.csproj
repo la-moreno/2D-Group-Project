@@ -62,20 +62,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Scripts\AttackTrigger.cs" />
-    <Compile Include="Assets\_Scripts\Inventory Scripts\Inventory.cs" />
-    <Compile Include="Assets\_Scripts\Inventory Scripts\InventorySlot.cs" />
-    <Compile Include="Assets\_Scripts\Inventory Scripts\InventoryUI.cs" />
-    <Compile Include="Assets\_Scripts\Inventory Scripts\Item.cs" />
-    <Compile Include="Assets\_Scripts\Inventory Scripts\PickUpAndHoldItem.cs" />
-    <Compile Include="Assets\_Scripts\Monster.cs" />
-    <Compile Include="Assets\_Scripts\Monster_Node.cs" />
-    <Compile Include="Assets\_Scripts\PlayerAttack.cs" />
-    <Compile Include="Assets\_Scripts\PlayerController.cs" />
     <Compile Include="Assets\Art\Tiles\RailNode.cs" />
-    <Compile Include="Assets\EnemyAI.cs" />
     <Compile Include="Assets\MessSpawn.cs" />
     <Compile Include="Assets\Monster_Controller.cs" />
+    <Compile Include="Assets\Scripts\AttackTrigger.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\Inventory Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Inventory Scripts\InventorySlot.cs" />
+    <Compile Include="Assets\Scripts\Inventory Scripts\InventoryUI.cs" />
+    <Compile Include="Assets\Scripts\Inventory Scripts\Item.cs" />
+    <Compile Include="Assets\Scripts\Inventory Scripts\PickUpAndHoldItem.cs" />
+    <Compile Include="Assets\Scripts\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Sounds\AudioManger.cs" />
     <Compile Include="Assets\Sounds\Sounds.cs" />
     <Compile Include="Assets\Wolv Interactive\Pixel Perfect Retro Camera\Scenes\Example\MoveCamera.cs" />
@@ -643,14 +641,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
-      <Project>{6048EDFE-64FD-3C8E-2756-B42BE7451544}</Project>
-      <Name>Unity.2D.Tilemap.Extras.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-      <Project>{2A84274A-9EBB-0D9F-108A-0743AE279960}</Project>
-      <Name>Unity.2D.Tilemap.Extras</Name>
-    </ProjectReference>
     <ProjectReference Include="AstarPathfindingProject.csproj">
       <Project>{928446D3-53B5-A3F5-B52D-A81989C2C113}</Project>
       <Name>AstarPathfindingProject</Name>
@@ -659,9 +649,17 @@
       <Project>{2438C4AA-E412-E4F4-363B-28F725FABCEE}</Project>
       <Name>PackageToolsEditor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
+      <Project>{6048EDFE-64FD-3C8E-2756-B42BE7451544}</Project>
+      <Name>Unity.2D.Tilemap.Extras.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
       <Project>{47589BD5-E143-1274-0E6E-4B5A1FF7CD67}</Project>
       <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
+      <Project>{2A84274A-9EBB-0D9F-108A-0743AE279960}</Project>
+      <Name>Unity.2D.Tilemap.Extras</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
