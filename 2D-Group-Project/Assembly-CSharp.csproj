@@ -65,7 +65,6 @@
   <ItemGroup>
     <Compile Include="Assets\Art\Tiles\RailNode.cs" />
     <Compile Include="Assets\MessSpawn.cs" />
-    <Compile Include="Assets\Monster_Controller.cs" />
     <Compile Include="Assets\Scripts\AttackTrigger.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\Inventory\Hotbar.cs" />
