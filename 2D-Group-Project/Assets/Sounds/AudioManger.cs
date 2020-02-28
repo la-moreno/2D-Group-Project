@@ -36,7 +36,7 @@ public class AudioManger : MonoBehaviour
         //Play("GameIntroWAV");
     }
     //FindObjectOfType<AudioManger>().Play to play sounds 
-    public void Play(string name)
+    public void Play(string name, float volume = 0.5f)
     {
         Sounds s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
@@ -44,6 +44,8 @@ public class AudioManger : MonoBehaviour
            Debug.LogWarning("sound: " + name + " not found!");
            return;
         }
+
+        s.source.volume = volume;
         s.source.Play();
     }
 }
