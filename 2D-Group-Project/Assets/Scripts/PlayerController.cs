@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+
     public float MOVEMENT_BASE_SPEED = 1.0f;
 
     //For direction
@@ -31,11 +32,12 @@ public class PlayerController : MonoBehaviour
     //For soundFX
     float StepInterval = 0.0f;
 
+    AudioManger audioManager;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        audioManager = AudioManger.instance;
     }
 
     // Update is called once per frame
@@ -76,7 +78,7 @@ public class PlayerController : MonoBehaviour
         {
             if (StepInterval < Time.time)
             {
-                FindObjectOfType<AudioManger>().Play("FootSteps");
+                audioManager.Play("FootSteps");
                 StepInterval = Time.time + 0.4f;
             }
         }
