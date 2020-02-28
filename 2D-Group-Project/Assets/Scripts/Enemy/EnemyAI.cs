@@ -19,6 +19,7 @@ public class EnemyAI : MonoBehaviour
     public Transform player;
     public float speed = 200;
     public float nextWaypointDistance = 3f;
+    public float detectionRadius = 5.0f;
 
     // Transform of animated object for monster
     public Transform enemyGFX;  
@@ -29,11 +30,17 @@ public class EnemyAI : MonoBehaviour
     int currentWaypoint = 0;
     bool reachedEndOfPath = true;
 
+    //Variables for audio
+    float stepInterval = 0.6f;
+    float stepTime = 0.0f;
+
     Seeker seeker;
     Rigidbody2D rb;
-
+    AudioManger audioManger;
     void Start()
     {
+        audioManger = AudioManger.instance;
+        
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         
@@ -44,6 +51,29 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+        Vector2 ToPlayer = player.position - transform.position;
+
+        // Pursure player if within the detection radius, otherwise, switch to wander
+        if (ToPlayer.magnitude <= detectionRadius)
+            state = MonsterState.pursue_player;
+        else
+            state = MonsterState.wander;
+
+        // Play footsteps
+        if(stepTime < Time.time)
+        {
+            if (ToPlayer.magnitude < 15.0f)
+            {
+                // Convert distance to value between 0 and 1 for volume
+                float volume = Mathf.Clamp01(0.2f / ToPlayer.magnitude);
+                Debug.Log(volume);
+
+                // Play monster footstep sound
+                audioManger.Play("Monster_Footsteps", volume);
+            }
+            stepTime = Time.time + stepInterval;
+        }
+
         // Switch to new state if the state has changed
         if (state != currentState)
         {
