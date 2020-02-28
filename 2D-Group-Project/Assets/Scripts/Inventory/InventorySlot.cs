@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour
 {
     public Image icon; //reference to the image component on the icon object
-    public Button removeButton; 
+    //public Button removeButton; 
     public Item item; //Keep track of the current item of the slot 
     //public bool droppeditem;
     //public DropItem ItemDroped;
@@ -23,7 +23,7 @@ public class InventorySlot : MonoBehaviour
 
         icon.sprite = item.icon;
         icon.enabled = true;
-        removeButton.interactable = true; //When we add an item, remove button can now be pressed 
+        //removeButton.interactable = true; //When we add an item, remove button can now be pressed 
     }
 
     public void ClearSlot()
@@ -31,7 +31,7 @@ public class InventorySlot : MonoBehaviour
         item = null;
         icon.sprite = null;
         icon.enabled = false;
-        removeButton.interactable = false; 
+        //removeButton.interactable = false; 
 
     }
 
@@ -51,16 +51,16 @@ public class InventorySlot : MonoBehaviour
         //Check if we actually have an item
         if(item != null)
         {
-            if (item.itemType == "Food")
-            {
-                item.Eat();
-                //Inventory.instance.Remove(item);
-            }
-            else if (item.itemType == "Equipment")
-            {
-                item.Equip();
-            }
-            else
+            //if (item.itemType == "Food")
+            //{
+            //    item.Eat();
+            //    //Inventory.instance.Remove(item);
+            //}
+            //else if (item.itemType == "Equipment")
+            //{
+            //    item.Equip();
+            //}
+            //else
                 item.Use(); 
         }
     }

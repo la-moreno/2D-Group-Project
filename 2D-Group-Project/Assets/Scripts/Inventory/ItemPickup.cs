@@ -1,68 +1,86 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems; 
+using UnityEngine.UI; 
+using UnityEngine.EventSystems;
 
 
 ////////////////FOR PICKUP AND DROP ITEM ON MOUSE CLICK////////////////////
-public class PickUpAndHoldItem : MonoBehaviour
+public class ItemPickup : MonoBehaviour
 {
+    [SerializeField]
+    private Text pickupText = null;
+
+    private bool pickUpAllowed;
+
     public Item item;                  //Used to know what item and its properties we're picking up 
     public GameObject Player;
     //public Transform Destination;      //this is the hand that holds the item
-    public float pickupDistance;       //Value set by player. How close does player want to be in order to pick up the item
-    float itemPlayerDistance;          //Actual distance between player and object
+    //public float pickupDistance;       //Value set by player. How close does player want to be in order to pick up the item
+    //float itemPlayerDistance;          //Actual distance between player and object
     //public InventoryUI invUI;          //Used to check if player has the inventory up 
     InventorySlot[] slots;             //Slots inside inventory         
     public Transform itemsParent;      //Used to determine where the inventory slot(s) is     
 
-    
+
 
     void Start()
     {
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
-        
+        pickupText.gameObject.SetActive(false);
+
     }
 
-    void OnMouseDown()
-    {
-        if (itemPlayerDistance <= pickupDistance)                           //If player is within a certain distance of object
-        {
-         
-            //***************Change.  Interact with object instead.***************
-            AddToInventory(); 
+    //void OnMouseDown()
+    //{
+    //    if (itemPlayerDistance <= pickupDistance)                           //If player is within a certain distance of object
+    //    {
 
-            //}
-        }
-    }
+    //        //***************Change.  Interact with object instead.***************
+    //        AddToInventory(); 
+
+    //        //}
+    //    }
+    //}
 
     void Update()
     {
-        itemPlayerDistance = Vector2.Distance(this.transform.position, Player.transform.position); //Determines distance between object and player
+        if (pickUpAllowed && Input.GetKeyDown(KeyCode.E))
+            AddToInventory();
+        //itemPlayerDistance = Vector2.Distance(this.transform.position, Player.transform.position); //Determines distance between object and player
         //Debug.Log(itemPlayerDistance); 
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name.Equals("Player"))
+        {
+            pickupText.gameObject.SetActive(true);
+            pickUpAllowed = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name.Equals("Player"))
+        {
+            pickupText.gameObject.SetActive(false);
+            pickUpAllowed = false;
+        }
+    }
+
     public void AddToInventory()
     {
-        bool wasPickedUp = Inventory.instance.Add(item); //if there's space in the inventory, add the object/item to inventory
+        Inventory.instance.Add(item); //if there's space in the inventory, add the object/item to inventory
 
-        if (wasPickedUp)
-        {
-            Debug.Log(item.name + " added to inventory.");
-            Destroy(gameObject);
-          }
-        //else 
-        //{
-        //    this.transform.parent = null;
-        //    GetComponent<Rigidbody>().useGravity = true;
-        //    GetComponent<Rigidbody>().isKinematic = false;
-           
-        //}
-     }
+        Debug.Log(item.name + " added to inventory.");
+        Destroy(gameObject);
+    }
+
+
 
 }
-
 
 
 
