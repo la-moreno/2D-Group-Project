@@ -26,7 +26,7 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         //If key pressed and not attacking
-        if(Input.GetKeyDown("f") && !attacking)
+        if(Input.GetKeyDown(KeyCode.F) && !attacking)
         {
             attacking = true;
             attackTimer = attackCoolDown;
