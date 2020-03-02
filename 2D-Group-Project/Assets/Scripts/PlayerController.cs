@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
     {
         Move();
 
-        rb.MovePosition(rb.position + keyMovement * movementSpeed);
+        rb.MovePosition(rb.position + keyMovement * movementSpeed * MOVEMENT_BASE_SPEED);
     }
 
     //for handling input
