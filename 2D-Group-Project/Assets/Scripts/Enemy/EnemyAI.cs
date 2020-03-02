@@ -69,11 +69,12 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, ToPlayer.normalized, 1000f, LayerMask.NameToLayer("Monster"));
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, ToPlayer.normalized, 1000f, LayerMask.NameToLayer("Default"));
             if (hit.collider != null)
             {
                 if (hit.collider.CompareTag("Player"))
-                { 
+                {
+                    Debug.Log("Player Lost");
                     playerFound = false;
                     state = MonsterState.wander;
                 }
@@ -145,7 +146,6 @@ public class EnemyAI : MonoBehaviour
     {
         if (seeker.IsDone())
             seeker.StartPath(rb.position, destination, OnPathComplete);
-        Debug.Log("Path started");
     }
 
     // Set found path as current path
