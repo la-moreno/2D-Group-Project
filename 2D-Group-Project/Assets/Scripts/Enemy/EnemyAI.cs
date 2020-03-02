@@ -6,6 +6,8 @@ using System.Linq;
 
 public class EnemyAI : MonoBehaviour
 {
+    public const float DETECTION_RADIUS = 5.0f;
+
     enum MonsterState
     {
         idle,
@@ -18,8 +20,9 @@ public class EnemyAI : MonoBehaviour
 
     public Transform player;
     public float speed = 200;
-    public float nextWaypointDistance = 3f;
-    public float detectionRadius = 5.0f;
+    public float nextWaypointDistance = 0.05f;
+
+    bool playerFound = false;
 
     // Transform of animated object for monster
     public Transform enemyGFX;  
@@ -53,13 +56,32 @@ public class EnemyAI : MonoBehaviour
     {
         Vector2 ToPlayer = player.position - transform.position;
 
-        // Pursure player if within the detection radius, otherwise, switch to wander
-        if (ToPlayer.magnitude <= detectionRadius)
-            state = MonsterState.pursue_player;
+        if (playerFound == false)
+        {
+            // Pursure player if within the detection radius
+            if (ToPlayer.magnitude <= DETECTION_RADIUS)
+            {
+                state = MonsterState.pursue_player;
+                playerFound = true;
+            }
+            else
+                state = MonsterState.wander;
+        }
         else
-            state = MonsterState.wander;
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, ToPlayer.normalized, 1000f, LayerMask.NameToLayer("Default"));
+            if (hit.collider != null)
+            {
+                if (hit.collider.CompareTag("Player"))
+                {
+                    Debug.Log("Player Lost");
+                    playerFound = false;
+                    state = MonsterState.wander;
+                }
+            }
+        }
 
-        // Play footsteps
+        // Play footsteps (volume based on distance from player)
         if(stepTime < Time.time)
         {
             if (ToPlayer.magnitude < 15.0f)
@@ -124,7 +146,6 @@ public class EnemyAI : MonoBehaviour
     {
         if (seeker.IsDone())
             seeker.StartPath(rb.position, destination, OnPathComplete);
-        Debug.Log("Path started");
     }
 
     // Set found path as current path
