@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public float MOVEMENT_BASE_SPEED = 1.0f;
 
+    //Controller---------------------------------------------------
     //For direction
     public Vector2 movementDirection;
 
@@ -17,9 +18,10 @@ public class PlayerController : MonoBehaviour
     //To access rigidbody
     public Rigidbody2D rb;          //Drag and drop the rigidbody to the script rb field
 
-    //-----------------------------------------------------
+    /////////////////////////////////////////////////
     //For keyboard movement
     Vector2 keyMovement;
+    //////////////////////////////////////////////////
 
 
     //For animating
@@ -56,7 +58,7 @@ public class PlayerController : MonoBehaviour
         verticalMove = Input.GetAxisRaw("Vertical");
         animator.SetFloat("VerticalSpeed", verticalMove);
     }
-    //-------------------------------------keyboard
+    /////keyboard////////////////////////////////
     void FixedUpdate()
     {
         Move();
@@ -83,13 +85,14 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        //----------------------keyboard
+        //keyboard///////////////////////////////////////////////
         keyMovement.x = Input.GetAxisRaw("Horizontal");
         keyMovement.y = Input.GetAxisRaw("Vertical");
+        /////////////////////////////////////////////////////
 
     }
 
-
+    //Controller
     //Change players speed according to input
     void Move()
     {
