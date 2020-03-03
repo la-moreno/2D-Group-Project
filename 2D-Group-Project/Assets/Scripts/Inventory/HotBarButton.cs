@@ -14,6 +14,10 @@ public class HotBarButton : MonoBehaviour
     private int selectedHotbarIndex = 0;
     private float scrollNumber;
     
+    void Start()
+    {
+        
+    }
 
     private void OnValidate()
     {
@@ -32,17 +36,29 @@ public class HotBarButton : MonoBehaviour
 
     private void Update()
     {
-        //UpdateSelectedHotbarIndex(scrollNumber);
-        //Debug.Log(GetSelectedHotbarIndex());
-        //if(Input.GetAxis("Mouse ScrollWheel") > 0 )
+        //int previousSelectedWeapon= selectf
+        ////UpdateSelectedHotbarIndex(scrollNumber);
+        ////Debug.Log(GetSelectedHotbarIndex());
+        //if (Input.GetAxis("Mouse ScrollWheel") > 0)
         //{
-
+        //    if (selectedHotbarIndex >= transform.childCount - 1)
+        //        selectedHotbarIndex = 0;
+        //    else
+        //        selectedHotbarIndex++;
+        //}
+        //if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        //{
+        //    if (selectedHotbarIndex <= 0)
+        //        selectedHotbarIndex = transform.childCount - 1; 
+        //    else
+        //        selectedHotbarIndex--;
         //}
 
         if (Input.GetKeyDown(keyCode))
-        {
-            HandleClick(); 
-        }
+            HandleClick();
+
+        //if (Input.GetKeyDown(KeyCode.Mouse0))
+        //    HandleMouseClick();
 
 
         //for (int i = 0; i < 9; i++)
@@ -65,20 +81,20 @@ public class HotBarButton : MonoBehaviour
         //EventSystem.current.SetSelectedGameObject(null);
     }
 
-    private void UpdateSelectedHotbarIndex(float direction)
-    {
-        if (direction > 0)
-            direction = 1;
+    //private void SelectedHotbarIndex(float direction)
+    //{
+    //    if (direction > 0)
+    //        direction = 1;
 
-        if (direction < 0)
-            direction = -1;
+    //    if (direction < 0)
+    //        direction = -1;
 
-        for (selectedHotbarIndex -= (int)direction; selectedHotbarIndex < 0; selectedHotbarIndex += 9) ;
-        //selectedHotbarIndex = keyNumber; 
+    //    for (selectedHotbarIndex -= (int)direction; selectedHotbarIndex < 0; selectedHotbarIndex += 9) ;
+    //    //selectedHotbarIndex = keyNumber; 
 
-        while (selectedHotbarIndex >= 9)
-            selectedHotbarIndex -= 9;
-    }
+    //    while (selectedHotbarIndex >= 9)
+    //        selectedHotbarIndex -= 9;
+    //}
 
     public int GetSelectedHotbarIndex()
     {
