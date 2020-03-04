@@ -20185,10 +20185,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.00069347024
-    y: 0.016837478
-    width: 0.99861306
-    height: 0.96632504
+    x: 0.004132241
+    y: 0.021739125
+    width: 0.9917355
+    height: 0.95652175
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -29768,8 +29768,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660084511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.001, y: -0.09, z: 0}
-  m_LocalScale: {x: 1, y: 1.4306248, z: 1}
+  m_LocalPosition: {x: -0.006, y: -0.051, z: 0}
+  m_LocalScale: {x: 2.9910047, y: 1.5397099, z: 1}
   m_Children: []
   m_Father: {fileID: 318287676}
   m_RootOrder: 1
@@ -29796,7 +29796,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
