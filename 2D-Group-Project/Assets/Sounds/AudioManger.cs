@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class AudioManger : MonoBehaviour
 {
-   public Sounds[] sounds; 
-  public static AudioManger instance;
+    public Sounds[] sounds;
+    public static AudioManger instance;
 
     void Awake()
     {
-
         if (instance == null)
             instance = this;
         else
@@ -33,10 +32,10 @@ public class AudioManger : MonoBehaviour
 
     void Start()
     {
-        //Play("GameIntroWAV");
+        Play("MainGameMusic");
     }
     //FindObjectOfType<AudioManger>().Play to play sounds 
-    public void Play(string name)
+    public void Play(string name, float volume = 0.5f)
     {
         Sounds s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
@@ -44,6 +43,8 @@ public class AudioManger : MonoBehaviour
            Debug.LogWarning("sound: " + name + " not found!");
            return;
         }
+
+        s.source.volume = volume;
         s.source.Play();
     }
 }

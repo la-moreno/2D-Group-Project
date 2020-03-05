@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+
     public float MOVEMENT_BASE_SPEED = 1.0f;
 
+    //Controller---------------------------------------------------
     //For direction
     public Vector2 movementDirection;
 
@@ -16,9 +18,10 @@ public class PlayerController : MonoBehaviour
     //To access rigidbody
     public Rigidbody2D rb;          //Drag and drop the rigidbody to the script rb field
 
-    //-----------------------------------------------------
+    /////////////////////////////////////////////////
     //For keyboard movement
     Vector2 keyMovement;
+    //////////////////////////////////////////////////
 
 
     //For animating
@@ -31,11 +34,12 @@ public class PlayerController : MonoBehaviour
     //For soundFX
     float StepInterval = 0.0f;
 
+    AudioManger audioManager;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        audioManager = AudioManger.instance;
     }
 
     // Update is called once per frame
@@ -54,12 +58,12 @@ public class PlayerController : MonoBehaviour
         verticalMove = Input.GetAxisRaw("Vertical");
         animator.SetFloat("VerticalSpeed", verticalMove);
     }
-    //-------------------------------------keyboard
+    /////keyboard////////////////////////////////
     void FixedUpdate()
     {
         Move();
 
-        rb.MovePosition(rb.position + keyMovement * movementSpeed);
+        rb.MovePosition(rb.position + keyMovement * movementSpeed * MOVEMENT_BASE_SPEED);
     }
 
     //for handling input
@@ -76,18 +80,19 @@ public class PlayerController : MonoBehaviour
         {
             if (StepInterval < Time.time)
             {
-                FindObjectOfType<AudioManger>().Play("FootSteps");
+                audioManager.Play("FootSteps");
                 StepInterval = Time.time + 0.4f;
             }
         }
 
-        //----------------------keyboard
+        //keyboard///////////////////////////////////////////////
         keyMovement.x = Input.GetAxisRaw("Horizontal");
         keyMovement.y = Input.GetAxisRaw("Vertical");
+        /////////////////////////////////////////////////////
 
     }
 
-
+    //Controller
     //Change players speed according to input
     void Move()
     {

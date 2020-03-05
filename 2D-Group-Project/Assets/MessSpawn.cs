@@ -9,75 +9,63 @@ public class MessSpawn : MonoBehaviour
 {
     public int NumOfMesses;
     public GameObject[] Messes;
-    
+    public float waitTime = 5.0f;
+    private float timer = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
-       
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       if(NumOfMesses <= 6)
+        timer += Time.deltaTime;
+        if (timer > waitTime && NumOfMesses <= 6)
         {
-            int Index = MessNumb();
-            switch (Index)
-            {
-                case 0:
-                    {
-                        Instantiate(Messes[Index], RandomMessPos(), Quaternion.identity);
-                        NumOfMesses++;
-                        break;
-                    }
-                case 1:
-                    {
-                        Instantiate(Messes[Index], RandomMessPos(), Quaternion.identity);
-                        NumOfMesses++;
-                        break;
-                    }
-                case 2:
-                    {
-                        Instantiate(Messes[Index], RandomMessPos(), Quaternion.identity);
-                        NumOfMesses++;
-                        break;
-                    }
-                case 3:
-                    {
-                        Instantiate(Messes[Index], RandomMessPos(), Quaternion.identity);
-                        NumOfMesses++;
-                        break;
-                    }
-
-                case 4:
-                    {
-                        Instantiate(Messes[Index], RandomMessPos(), Quaternion.identity);
-                        NumOfMesses++;
-                        break;
-                    }
-
-                case 5:
-                    {
-                        Instantiate(Messes[MessNumb()], RandomMessPos(), Quaternion.identity);
-                        NumOfMesses++;
-                        break;
-                    }
-                default:
-                    break;
-            }
+            RandomMessPos();
+            timer = timer - waitTime;
         }
-     
+
     }
 
-    Vector3 RandomMessPos()
+    void RandomMessPos()
     {
         Vector3 MessSpawnPoint = new Vector3(transform.position.x, transform.position.y, 0);
-        return MessSpawnPoint; 
+
+
+
+        int Index = MessNumb();
+        switch (Index)
+        {
+            case 0:
+                {
+                    Instantiate(Messes[Index], MessSpawnPoint, Quaternion.identity);
+                    NumOfMesses++;
+                    return;
+                }
+            case 1:
+                {
+                    Instantiate(Messes[Index], MessSpawnPoint, Quaternion.identity);
+                    NumOfMesses++;
+                    return;
+                }
+            case 2:
+                {
+                    Instantiate(Messes[Index], MessSpawnPoint, Quaternion.identity);
+                    NumOfMesses++;
+                    return;
+                }
+
+            default:
+                break;
+        }
     }
-     
+
     int MessNumb()
     {
-       int MessNumber = Random.Range(0 , 5);
-       return MessNumber; 
+        int MessNumber = Random.Range(0, 5);
+        return MessNumber;
     }
 }

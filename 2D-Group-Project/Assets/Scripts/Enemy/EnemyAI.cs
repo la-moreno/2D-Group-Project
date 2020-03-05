@@ -6,6 +6,8 @@ using System.Linq;
 
 public class EnemyAI : MonoBehaviour
 {
+    public const float DETECTION_RADIUS = 5.0f;
+
     enum MonsterState
     {
         idle,
@@ -18,7 +20,9 @@ public class EnemyAI : MonoBehaviour
 
     public Transform player;
     public float speed = 200;
-    public float nextWaypointDistance = 3f;
+    public float nextWaypointDistance = 0.05f;
+
+    bool playerFound = false;
 
     // Transform of animated object for monster
     public Transform enemyGFX;  
@@ -29,11 +33,17 @@ public class EnemyAI : MonoBehaviour
     int currentWaypoint = 0;
     bool reachedEndOfPath = true;
 
+    //Variables for audio
+    float stepInterval = 0.6f;
+    float stepTime = 0.0f;
+
     Seeker seeker;
     Rigidbody2D rb;
-
+    AudioManger audioManger;
     void Start()
     {
+        audioManger = AudioManger.instance;
+        
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         
@@ -44,6 +54,48 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+        Vector2 ToPlayer = player.position - transform.position;
+
+        if (playerFound == false)
+        {
+            // Pursure player if within the detection radius
+            if (ToPlayer.magnitude <= DETECTION_RADIUS)
+            {
+                state = MonsterState.pursue_player;
+                playerFound = true;
+            }
+            else
+                state = MonsterState.wander;
+        }
+        else
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, ToPlayer.normalized, 1000f, LayerMask.NameToLayer("Default"));
+            if (hit.collider != null)
+            {
+                if (hit.collider.CompareTag("Player"))
+                {
+                    Debug.Log("Player Lost");
+                    playerFound = false;
+                    state = MonsterState.wander;
+                }
+            }
+        }
+
+        // Play footsteps (volume based on distance from player)
+        if(stepTime < Time.time)
+        {
+            if (ToPlayer.magnitude < 15.0f)
+            {
+                // Convert distance to value between 0 and 1 for volume
+                float volume = Mathf.Clamp01(0.2f / ToPlayer.magnitude);
+                Debug.Log(volume);
+
+                // Play monster footstep sound
+                audioManger.Play("Monster_Footsteps", volume);
+            }
+            stepTime = Time.time + stepInterval;
+        }
+
         // Switch to new state if the state has changed
         if (state != currentState)
         {
@@ -94,7 +146,6 @@ public class EnemyAI : MonoBehaviour
     {
         if (seeker.IsDone())
             seeker.StartPath(rb.position, destination, OnPathComplete);
-        Debug.Log("Path started");
     }
 
     // Set found path as current path
