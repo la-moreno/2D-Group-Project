@@ -590,7 +590,6 @@ GameObject:
   - component: {fileID: 318287674}
   - component: {fileID: 318287678}
   - component: {fileID: 318287680}
-  - component: {fileID: 318287679}
   - component: {fileID: 318287681}
   m_Layer: 0
   m_Name: Player
@@ -723,32 +722,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &318287679
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318287673}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.05151081, y: 0.12705946}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.6}
-    newSize: {x: 1.6, y: 1.6}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.89258766, y: 1.345881}
-  m_EdgeRadius: 0
 --- !u!70 &318287680
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -20582,7 +20555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca652c13353f448d9227970c0928082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  referenceHeight: 220
+  referenceHeight: 113
   pixelsPerUnit: 10
 --- !u!20 &519420031
 Camera:
@@ -20603,15 +20576,15 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0009861887
-    y: 0.15299684
-    width: 0.9980276
-    height: 0.6940063
+    x: 0.0019723773
+    y: 0.054416418
+    width: 0.99605525
+    height: 0.89116716
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11
+  orthographic size: 5.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -20761,7 +20734,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540390169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 23.4, y: 17.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 157984458}
@@ -31496,16 +31469,16 @@ PrefabInstance:
         type: 3}
       propertyPath: sounds.Array.data[0].Chip
       value: 
-      objectReference: {fileID: 8300000, guid: 7e5ae248d4ae34e4d974266e96ed6090, type: 3}
+      objectReference: {fileID: 8300000, guid: c02bb903d06bde142a93d76a6361484c, type: 3}
     - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
         type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
         type: 3}
       propertyPath: sounds.Array.data[0].pitch
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
         type: 3}
@@ -31605,7 +31578,7 @@ PrefabInstance:
     - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
         type: 3}
       propertyPath: sounds.Array.data[7].volume
-      value: 0.482
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 703675829898900514, guid: 4614c5e70eeb2c64ba404859c4573e30,
         type: 3}
