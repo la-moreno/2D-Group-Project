@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Furniture : MonoBehaviour
 {
+    [HideInInspector]
     public float dirtyValue = 0.0f;
 
     Material material;
@@ -19,6 +20,11 @@ public class Furniture : MonoBehaviour
 
     private void Update()
     {
-        material.SetFloat("DirtyValue", dirtyValue);
+        material.SetFloat("_DirtyValue", dirtyValue);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("hit");
     }
 }
