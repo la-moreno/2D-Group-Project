@@ -13,30 +13,24 @@ public class HotBarButton : MonoBehaviour
     public InventorySlot slot;
     private int selectedHotbarIndex = 0;
     private float scrollNumber;
-    
-    void Start()
-    {
-        
-    }
 
     private void OnValidate()
     {
 
         keyNumber = transform.GetSiblingIndex() + 1;
         keyCode = KeyCode.Alpha0 + keyNumber;
-        
-         
-        slot = this.GetComponent<InventorySlot>(); 
+
+        slot = this.GetComponent<InventorySlot>();
     }
- 
+
     private void Awake()
     {
-        GetComponent<Button>().onClick.AddListener(HandleClick); 
+        GetComponent<Button>().onClick.AddListener(HandleClick);
     }
 
     private void Update()
     {
-        //int previousSelectedWeapon= selectf
+       
         ////UpdateSelectedHotbarIndex(scrollNumber);
         ////Debug.Log(GetSelectedHotbarIndex());
         //if (Input.GetAxis("Mouse ScrollWheel") > 0)
@@ -76,8 +70,7 @@ public class HotBarButton : MonoBehaviour
             OnButtonClicked.Invoke(keyNumber);
         slot.UseItem();
         GetComponent<Button>().Select();
-        
-        //StartCoroutine(Wait());
+
         //EventSystem.current.SetSelectedGameObject(null);
     }
 
@@ -101,8 +94,4 @@ public class HotBarButton : MonoBehaviour
         return selectedHotbarIndex;
     }
 
-    //private IEnumerator Wait()
-    //{
-    //    yield return new WaitForSeconds(5);
-    //}
 }

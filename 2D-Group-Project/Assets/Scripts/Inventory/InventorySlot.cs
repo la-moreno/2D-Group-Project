@@ -9,13 +9,7 @@ public class InventorySlot : MonoBehaviour
     public Image icon; //reference to the image component on the icon object
     //public Button removeButton; 
     public Item item; //Keep track of the current item of the slot 
-    //public bool droppeditem;
-    //public DropItem ItemDroped;
 
-    void Start()
-    {
-        //droppeditem = false;
-    }
 
     public void AddItem(Item newItem) //Add item to the slot
     {
@@ -35,32 +29,17 @@ public class InventorySlot : MonoBehaviour
 
     }
 
-
     public void onRemoveButton() //Called whenever Remove button is pressed
     {
         //Drop item here 
-        Inventory.instance.Remove(item); 
-
-        //droppeditem = true; 
-        
+        Inventory.instance.Remove(item);          
     }
-
 
     public void UseItem() //Have a way to use an item
     {
         //Check if we actually have an item
         if(item != null)
         {
-            //if (item.itemType == "Food")
-            //{
-            //    item.Eat();
-            //    //Inventory.instance.Remove(item);
-            //}
-            //else if (item.itemType == "Equipment")
-            //{
-            //    item.Equip();
-            //}
-            //else
                 item.Use(); 
         }
     }
