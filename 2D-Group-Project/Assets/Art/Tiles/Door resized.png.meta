@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: f6904badeab555b48900e46f4b392ce4
+guid: 010c9f414fb566d4ab3ce8b4b07e8d41
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7750248383183386311
-    second: Door
+      213: 4848487031960533642
+    second: Door resized_0
+  - first:
+      213: 6459887288056805798
+    second: Door resized_1
+  - first:
+      213: -2146154435047836768
+    second: Door resized_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -89,12 +95,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Door
+      name: Door resized_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 0
-        width: 18
+        x: 0
+        y: 27
+        width: 16
         height: 27
       alignment: 9
       pivot: {x: 0.5, y: 1.48}
@@ -103,8 +109,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27a72d333ea709240989cf0fcf482619
-      internalID: -7750248383183386311
+      spriteID: 988e2987ca1082e4290b5ba86fcae0c5
+      internalID: 4848487031960533642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door resized_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 27
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9766d43776089fb458e23c918a0bf70c
+      internalID: 6459887288056805798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door resized_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39c8c6e155ab7c43b6bf48ea0c9b5d1
+      internalID: -2146154435047836768
       vertices: []
       indices: 
       edges: []
