@@ -69,13 +69,13 @@
      <Compile Include="Assets\2d-extras-master\Runtime\Tiles\WeightedRandomTile\WeightedRandomTile.cs" />
      <None Include="Assets\2d-extras-master\Runtime\Brushes\TintedTilemap.shader" />
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Users/kimmi/Documents/GitHub/2D-Group-Project/2D-Group-Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/jgonzalez78620/Documents/GitHub/2D-Group-Project/2D-Group-Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>D:/Users/kimmi/Documents/GitHub/2D-Group-Project/2D-Group-Project/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>C:/Users/jgonzalez78620/Documents/GitHub/2D-Group-Project/2D-Group-Project/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Users/kimmi/Documents/GitHub/2D-Group-Project/2D-Group-Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/jgonzalez78620/Documents/GitHub/2D-Group-Project/2D-Group-Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -264,7 +264,7 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
- <HintPath>D:/Users/kimmi/Documents/GitHub/2D-Group-Project/2D-Group-Project/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ <HintPath>C:/Users/jgonzalez78620/Documents/GitHub/2D-Group-Project/2D-Group-Project/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.18f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
