@@ -29,7 +29,8 @@ ScriptsOnlyBuild:
     Unity.2D.Tilemap.Extras.dll:
     - UnityEngine.RuleTile
     Unity.RenderPipelines.Lightweight.Runtime.dll:
-    - UnityEngine.Rendering.LWRP.ForwardRendererData
+    - UnityEngine.Experimental.Rendering.LWRP.Light2D
+    - UnityEngine.Experimental.Rendering.LWRP.Renderer2DData
     - UnityEngine.Rendering.LWRP.LightweightRenderPipelineAsset
     - UnityEngine.Rendering.LWRP.LightweightRenderPipelineEditorResources
     UnityEditor.Graphs.dll:
@@ -142,6 +143,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13350}
     - Class: 114
       Script: {instanceID: 13408}
+    - Class: 114
+      Script: {instanceID: 13480}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1136,4 +1139,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/LevelLayout.unity
-  playerPath: C:/Users/asrey/Documents/GitHub/2D-Group-Project/2D-Group-Project/Builds/2D-Group-Project.exe
+  playerPath: C:/Users/lamoreno74891/Documents/GitHub/2D-Group-Project/2D-Group-Project/Builds/2D-Group-Project.exe

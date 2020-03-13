@@ -10,6 +10,6 @@ public class Hotbar : MonoBehaviour
 
     private void ButtonOnButtonClicked(int buttonNumber)
     {
-        Debug.Log(message: $"Button {buttonNumber} clicked!");
+        Debug.Log(buttonNumber + "clicked!");
     }
 }
