@@ -53,7 +53,7 @@ public class OpenDoor : MonoBehaviour
 
 
         this.gameObject.GetComponent<Collider2D>().enabled = false;
-        this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+        //this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
 
     }
 }
