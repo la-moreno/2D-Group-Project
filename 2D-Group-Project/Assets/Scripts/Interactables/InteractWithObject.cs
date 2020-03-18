@@ -4,28 +4,28 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class OpenDoor : MonoBehaviour
+public class InteractWithObject : MonoBehaviour
 {
     [SerializeField]
     private Text openText = null;
 
     private bool isOpenDoorAllowed;
     public GameObject Player;
-    private Animator anim; 
+    private Animator anim;
 
-   
+
     // Start is called before the first frame update
     void Start()
     {
         openText.gameObject.SetActive(false);
-        anim = this.GetComponent<Animator>(); 
+        anim = this.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (isOpenDoorAllowed && Input.GetKeyDown(KeyCode.E))
-            InteractWithDoor(); 
+            Interact();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -46,13 +46,16 @@ public class OpenDoor : MonoBehaviour
         }
     }
 
-    public void InteractWithDoor()
+    public void Interact()
     {
-        anim.SetBool("Open", true); 
+        if (anim.GetBool("Open") == true)
+            anim.SetBool("Open", false);
+        else
+            anim.SetBool("Open", true);
 
 
 
-        this.gameObject.GetComponent<Collider2D>().enabled = false;
+        //this.gameObject.GetComponent<Collider2D>().enabled = false;
         //this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
 
     }

@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 1484766970155613283}
   - component: {fileID: 9212671349962853673}
   - component: {fileID: 1474565584872835309}
+  - component: {fileID: -5722534374356939340}
   - component: {fileID: 4246857780944958592}
+  - component: {fileID: 8835062998744204855}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -96,6 +98,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirtyValue: 0
+--- !u!114 &-5722534374356939340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6277972279822532063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e5f5e515b15ac44b33d3921c6173a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openText: {fileID: 6758072286036654422, guid: ca1bbb13765188b4da0787c751e8a540,
+    type: 3}
+  Player: {fileID: 3613974389917295020, guid: e181e1710fa205249be9c81c440d524e, type: 3}
 --- !u!61 &4246857780944958592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,3 +139,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.3}
   m_EdgeRadius: 0
+--- !u!95 &8835062998744204855
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6277972279822532063}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1bd5d6c2eadc3044c98a4f2829565354, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
