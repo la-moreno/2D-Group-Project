@@ -9,7 +9,7 @@ public class OpenDoor : MonoBehaviour
     [SerializeField]
     private Text openText = null;
 
-    private bool isOpenDoorAllowed;
+    public bool isOpenDoorAllowed;
     public GameObject Player;
     private Animator anim; 
 
@@ -46,13 +46,40 @@ public class OpenDoor : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name.Equals("Player"))
+        {
+            openText.gameObject.SetActive(true);
+            isOpenDoorAllowed = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name.Equals("Player"))
+        {
+            openText.gameObject.SetActive(false);
+            isOpenDoorAllowed = false;
+        }
+    }
+
     public void InteractWithDoor()
     {
-        anim.SetBool("Open", true); 
+        if (anim.GetBool("Open") == true)
+        {
+            this.gameObject.GetComponent<Collider2D>().isTrigger = false;
+            anim.SetBool("Open", false);
+        }
+           
+        else
+        {
+            this.gameObject.GetComponent<Collider2D>().isTrigger = true;
+            anim.SetBool("Open", true);
+            openText.gameObject.SetActive(false); 
+        }
+          
 
-
-
-        this.gameObject.GetComponent<Collider2D>().enabled = false;
         //this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
 
     }
