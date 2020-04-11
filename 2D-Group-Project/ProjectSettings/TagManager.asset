@@ -45,3 +45,18 @@ TagManager:
   - name: Furniture
     uniqueID: 3548311245
     locked: 0
+  - name: Floor
+    uniqueID: 1541361413
+    locked: 0
+  - name: BelowPlayer
+    uniqueID: 1654968873
+    locked: 0
+  - name: Player
+    uniqueID: 1900856887
+    locked: 0
+  - name: AbovePlayer
+    uniqueID: 725711183
+    locked: 0
+  - name: UI
+    uniqueID: 1802334753
+    locked: 0

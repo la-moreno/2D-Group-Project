@@ -66,6 +66,7 @@
     <Compile Include="Assets\Art\Tiles\RailNode.cs" />
     <Compile Include="Assets\MessSpawn.cs" />
     <Compile Include="Assets\Scripts\AttackTrigger.cs" />
+    <Compile Include="Assets\Scripts\Depth.cs" />
     <Compile Include="Assets\Scripts\DynamicLight.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\Furniture.cs" />
