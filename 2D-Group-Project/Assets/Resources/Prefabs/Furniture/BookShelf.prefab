@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7907162606147550389}
   - component: {fileID: -3199988664731714836}
   - component: {fileID: 2649246008545943657}
-  - component: {fileID: -354559626016400648}
   m_Layer: 0
   m_Name: BookShelf
   m_TagString: Untagged
@@ -48,7 +47,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -70,9 +68,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1900856887
-  m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -5069812769078845159, guid: 4dba509a870cab14498e2b8a7958b7fe,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -124,15 +122,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 3.2}
   m_EdgeRadius: 0
---- !u!114 &-354559626016400648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5617944455969079381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd7febf9eacf57f468f476e186ed7b50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

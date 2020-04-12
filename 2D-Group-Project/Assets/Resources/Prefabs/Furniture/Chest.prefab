@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: -5722534374356939340}
   - component: {fileID: 4246857780944958592}
   - component: {fileID: 8835062998744204855}
-  - component: {fileID: -5826256249188392490}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -50,7 +49,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -72,9 +70,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1900856887
-  m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 6331069180392407773, guid: 4dba509a870cab14498e2b8a7958b7fe,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -160,15 +158,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-5826256249188392490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6277972279822532063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd7febf9eacf57f468f476e186ed7b50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

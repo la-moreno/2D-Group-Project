@@ -82,7 +82,6 @@ GameObject:
   - component: {fileID: 3613974389850912490}
   - component: {fileID: 3613974389850912488}
   - component: {fileID: 3613974389850912491}
-  - component: {fileID: 203419902}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -123,10 +122,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0012407005
-    y: 0.08909091
-    width: 0.9975186
-    height: 0.8218182
+    x: 0.0013799369
+    y: 0.09352517
+    width: 0.9972401
+    height: 0.81294966
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -169,37 +168,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   referenceHeight: 113
   pixelsPerUnit: 10
---- !u!114 &203419902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3613974389850912489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_CameraOutput: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
 --- !u!1 &3613974389917295020
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +184,8 @@ GameObject:
   - component: {fileID: 3613974389917295061}
   - component: {fileID: 3613974389917295060}
   - component: {fileID: 3613974389917295018}
-  - component: {fileID: 1310745604849339897}
+  - component: {fileID: 3613974389917295063}
+  - component: {fileID: 3613974389917295062}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -254,7 +223,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -276,9 +244,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1900856887
-  m_SortingLayer: 3
-  m_SortingOrder: -2428
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: -467307283419413426, guid: 9dce2129d6fdc2c4eb41fbca88174f3e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -362,8 +330,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00020778777, y: -0.7}
-  m_Size: {x: 0.99670106, y: 0.29999998}
+  m_Offset: {x: 0, y: -0.7}
+  m_Size: {x: 1, y: 0.3}
   m_Direction: 1
 --- !u!114 &3613974389917295060
 MonoBehaviour:
@@ -394,19 +362,17 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.93
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000cdee7ed3
+  m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0.5
-  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.88
-  m_PointLightOuterRadius: 10.11
+  m_PointLightOuterRadius: 10.03
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -419,15 +385,31 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &1310745604849339897
+--- !u!114 &3613974389917295063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3613974389917295020}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd7febf9eacf57f468f476e186ed7b50, type: 3}
+  m_Script: {fileID: 11500000, guid: 792568cf97e3dd4419f6132345574820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &3613974389917295062
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3613974389917295020}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.051410675, y: 0.086295605}
+  m_Size: {x: 0.90229034, y: 1.2584891}
+  m_Direction: 0
