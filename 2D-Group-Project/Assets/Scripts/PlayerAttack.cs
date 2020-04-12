@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    [SerializeField]
     private bool attacking = false;
-
+    [SerializeField]
     private float attackTimer = 0;
-
+    [SerializeField]
     private float attackCoolDown = 0.3f;
 
     public Collider2D attackTrigger;
-
     private Animator anim;
 
     //called at the start

@@ -1,63 +1,63 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
-using UnityEngine.UI; 
-using UnityEngine.EventSystems;
 
-
-
-public class ItemPickup : MonoBehaviour
+public class ItemPickup : MonoBehaviour //Add this to each tool you want to pick up 
 {
+    private Inventory inventory;
+    public GameObject itemButton; //item inside the slot
     [SerializeField]
-    private Text pickupText = null;
+    private Text pickupText = null; //Text that shows up when near a tool
+    private bool pickupAllowed; //is true when the player is inside the tool's collider
 
-    private bool pickUpAllowed;
-
-    public Item item;                  //Used to know what item and its properties we're picking up 
-    public GameObject Player;
-    InventorySlot[] slots;             //Slots inside inventory         
-    public Transform itemsParent;      //Used to determine where the inventory slot(s) is     
-
-    void Start()
+    private void Start()
     {
-        slots = itemsParent.GetComponentsInChildren<InventorySlot>();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>(); //get the inventory attached to the player 
         pickupText.gameObject.SetActive(false);
-
     }
 
-    void Update()
+    private void Update()
     {
-        if (pickUpAllowed && Input.GetKeyDown(KeyCode.E))
-            AddToInventory();
+       if (Input.GetKey(KeyCode.E) && pickupAllowed)
+        {
+            AddToInventory(); 
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other) //If player collides with object, he's allowed to pickup the item. 
     {
-        if (collision.gameObject.name.Equals("Player"))
+        if (other.CompareTag("Player"))
         {
             pickupText.gameObject.SetActive(true);
-            pickUpAllowed = true;
+            pickupAllowed = true;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D other) //Player no longer allowed to pickup the item.
     {
-        if (collision.gameObject.name.Equals("Player"))
+        if (other.gameObject.name.Equals("Player"))
         {
             pickupText.gameObject.SetActive(false);
-            pickUpAllowed = false;
+            pickupAllowed = false;
         }
     }
 
-    public void AddToInventory()
+    void AddToInventory()
     {
-        Inventory.instance.Add(item); //if there's space in the inventory, add the object/item to inventory
+        for (int i = 0; i < inventory.slots.Length; i++) //iterate through all slots in inventory
+        {
+            if (inventory.isFull[i] == false) //Check if the slot[i] of the inventory is full 
+            {
+                //item can be added 
+                inventory.isFull[i] = true;
+                Instantiate(itemButton, inventory.slots[i].transform, false); //Item's icon will be placed in the slot[i]
+                //if (inventory.slots[i].tag != "Untagged" && inventory.slots[i].tag != "Health Potion")
+                //player.GetComponent<Animator>().SetBool(gameObject.tag, true);
+                Destroy(gameObject); //destroy item you picked up. 
 
-        Debug.Log(item.name + " added to inventory.");
-        Destroy(gameObject);
+                break;
+            }
+        }
     }
-
 }
-
-
-

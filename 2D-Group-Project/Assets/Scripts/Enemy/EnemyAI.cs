@@ -88,7 +88,7 @@ public class EnemyAI : MonoBehaviour
             {
                 // Convert distance to value between 0 and 1 for volume
                 float volume = Mathf.Clamp01(0.2f / ToPlayer.magnitude);
-                Debug.Log(volume);
+                //Debug.Log(volume);
 
                 // Play monster footstep sound
                 audioManger.Play("Monster_Footsteps", volume);
