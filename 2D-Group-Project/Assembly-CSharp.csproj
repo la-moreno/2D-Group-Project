@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\AttackTrigger.cs" />
      <Compile Include="Assets\Scripts\DynamicLight.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
+     <Compile Include="Assets\Scripts\FlowerPots.cs" />
      <Compile Include="Assets\Scripts\Furniture.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Interactables\InteractWithObject.cs" />

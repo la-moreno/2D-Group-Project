@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField]
-    private bool attacking = false;
+    [HideInInspector]
+    public bool attacking = false;
 
     private float attackTimer = 0;
 
@@ -93,12 +93,14 @@ public class PlayerAttack : MonoBehaviour
         }
         if (selector.SelectedSlot() == "" && attacking)
         {
+            attackTrigger.enabled = false;
+            attacking = false;
             //if (anim.GetBool("Use" + MyEnum.Broom) == true)
             anim.SetBool("Use" + MyEnum.Broom, false);
             //if (anim.GetBool("Use" + MyEnum.Duster) == true)
             anim.SetBool("Use" + MyEnum.Duster, false);
-            attacking = false;
-            attackTrigger.enabled = false;
+
+            
         }
     }
 }

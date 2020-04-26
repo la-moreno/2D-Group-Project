@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Furniture : MonoBehaviour
 {
+    private HotbarSelector selector;
+    private PlayerAttack player;
+
     [HideInInspector]
     public float dirtyValue = 0.0f;
 
@@ -11,6 +14,9 @@ public class Furniture : MonoBehaviour
     MessManager messManager;
     void Start()
     {
+        selector = GameObject.Find("Selector").GetComponent<HotbarSelector>();
+        player = GameObject.Find("Player").GetComponent<PlayerAttack>();
+
         messManager = MessManager.Instance;
         material = GetComponent<SpriteRenderer>().material;
 
@@ -25,8 +31,11 @@ public class Furniture : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        dirtyValue -= 0.1f;
+        if (selector.SelectedSlot() == "Duster" && player.attacking)
+        {
+            dirtyValue -= 0.1f;
 
-        Debug.Log("hit");
+            Debug.Log("hit");
+        }
     }
 }

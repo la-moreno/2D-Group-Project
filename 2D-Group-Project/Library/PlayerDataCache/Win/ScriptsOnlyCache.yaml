@@ -4,7 +4,6 @@ ScriptsOnlyBuild:
     - AttackTrigger
     - AudioManger
     - DestroyAudio
-    - DynamicLight
     - EnemyAI
     - Furniture
     - HotbarSelector
@@ -88,10 +87,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -217,8 +214,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15430}
     - Class: 114
       Script: {instanceID: 15514}
-    - Class: 114
-      Script: {instanceID: 15544}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -337,6 +332,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13256}
     - Class: 114
+      Script: {instanceID: 13530}
+    - Class: 114
       Script: {instanceID: 13566}
     - Class: 114
       Script: {instanceID: 13594}
@@ -390,8 +387,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15458}
     - Class: 114
       Script: {instanceID: 15514}
-    - Class: 114
-      Script: {instanceID: 15544}
     - Class: 114
       Script: {instanceID: 15590}
     - Class: 114
@@ -885,7 +880,7 @@ ScriptsOnlyBuild:
     className: ItemPickup
   - hash:
       serializedVersion: 2
-      Hash: 78a2e0fd9db7d0c11bed5f180e899956
+      Hash: 70aac017d671e5331fd37d2f6f183812
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HotbarSelector
@@ -1155,7 +1150,7 @@ ScriptsOnlyBuild:
     className: GameManager
   - hash:
       serializedVersion: 2
-      Hash: 1f8ba64abdaecb64dcd4b1d4c87e0320
+      Hash: cb32872b409af3ad821b25cffab45f11
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerAttack
@@ -1227,7 +1222,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 78a2e0fd9db7d0c11bed5f180e899956
+      Hash: 70aac017d671e5331fd37d2f6f183812
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HotbarSelector

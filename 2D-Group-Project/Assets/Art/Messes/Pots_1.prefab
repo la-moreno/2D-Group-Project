@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4917188868272883560}
   - component: {fileID: 6934783851904181703}
   - component: {fileID: 8658028105616061595}
+  - component: {fileID: 4235860322682853565}
   m_Layer: 0
   m_Name: Pots_1
   m_TagString: Messes
@@ -109,3 +110,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4235860322682853565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5751283433653467865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de6f221df17951a4fa7bb4206867788c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
