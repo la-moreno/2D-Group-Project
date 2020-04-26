@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 48
+  controlID: 142
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 49
+  controlID: 143
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 55
+  controlID: 68
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 56
+  controlID: 69
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -418,9 +418,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: b2daffff2adbffff18deffff1edefffff0f0ffffaaf6ffffe8f9ffff40fbffff6c4a000022510000
+      m_SelectedIDs: 584e0000
+      m_LastClickedID: 20056
+      m_ExpandedIDs: 4aebffffd2ecffffb6f2ffff584e0000aa4e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -480,9 +480,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.47031677, y: 0.9826595, z: -1839.6035}
+    m_Target: {x: 10.507668, y: 11.051818, z: -1864.6406}
     speed: 2
-    m_Value: {x: 0.47031677, y: 0.9826595, z: -1839.6035}
+    m_Value: {x: 10.507668, y: 11.051818, z: -1864.6406}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -532,9 +532,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 13.924738
+    m_Target: 82.081856
     speed: 2
-    m_Value: 13.924738
+    m_Value: 82.081856
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -923,20 +923,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Menu
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Menu
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Users\kimmi\Documents\GitHub\2D-Group-Project\2D-Group-Project
+  m_LastProjectPath: C:\Users\lucas\Documents\GitHub\2D-Group-Project\2D-Group-Project
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 44430000
-    m_LastClickedID: 17220
-    m_ExpandedIDs: 00000000f83d0000ea410000ec410000ee410000f0410000f2410000f44100003c43000000ca9a3b
+    scrollPos: {x: 0, y: 78}
+    m_SelectedIDs: 5e450000
+    m_LastClickedID: 17758
+    m_ExpandedIDs: 000000005c41000066440000684400006a4400006c4400006e4400007044000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -964,7 +964,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f83d0000ea410000ec410000ee410000f0410000f2410000f4410000
+    m_ExpandedIDs: 000000005c41000066440000684400006a4400006c4400006e44000070440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1098,7 +1098,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 3c420000
     m_LastClickedID: 16956
-    m_ExpandedIDs: 00000000f83d0000ea410000ec410000ee410000f0410000f2410000f4410000
+    m_ExpandedIDs: 000000005c41000066440000684400006a4400006c4400006e44000070440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1126,7 +1126,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f83d0000ea410000ec410000ee410000f0410000f2410000f4410000
+    m_ExpandedIDs: 000000005c41000066440000684400006a4400006c4400006e44000070440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1219,4 +1219,4 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 720

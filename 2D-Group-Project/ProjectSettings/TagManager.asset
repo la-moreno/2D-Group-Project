@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Messes
+  - Broom
+  - Duster
   layers:
   - Default
   - TransparentFX
@@ -44,4 +46,7 @@ TagManager:
     locked: 0
   - name: Furniture
     uniqueID: 3548311245
+    locked: 0
+  - name: Player
+    uniqueID: 1976283437
     locked: 0
