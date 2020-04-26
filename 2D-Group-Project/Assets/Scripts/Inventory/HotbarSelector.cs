@@ -4,29 +4,29 @@ using UnityEngine;
 using UnityEngine.UI; 
 public class HotbarSelector : MonoBehaviour
 {
-    private Inventory inv;
+    [HideInInspector]
+    public Inventory inv;
     private RectTransform myTransform;
-    public Transform itemsparent; 
-
+    public Transform itemsparent;
 
     // Start is called before the first frame update
     void Start()
     {
         inv = FindObjectOfType<Inventory>();
-        myTransform = GetComponent<RectTransform>(); 
+        myTransform = GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(inv != null)
+        if (inv != null)
         {
-            Vector2 pos = new Vector2((inv.getSelectedHotbarIndex() * 100)-248f, 2f);
+            Vector2 pos = new Vector2((inv.getSelectedHotbarIndex() * 100) - 248f, 2f);
             myTransform.anchoredPosition = pos;
-            //SelectSlot();  
+            SelectedSlot();
         }
     }
-    void SelectSlot()
+    public string SelectedSlot()
     {
         for (int i = 0; i < itemsparent.childCount; i++)
         {
@@ -34,16 +34,14 @@ public class HotbarSelector : MonoBehaviour
             //Debug.Log("Slot pos" + itemsparent.GetChild(i).position); 
             if (myTransform.position == itemsparent.GetChild(i).position)
             {
-                Debug.Log("Slot" + i);
-
-
+                if (itemsparent.GetChild(i).childCount > 0)
+                {
+                    //Debug.Log(itemsparent.GetChild(i).GetChild(0).tag);
+                    return itemsparent.GetChild(i).GetChild(0).tag;
+                }
                 //itemsparent.GetChild(i).gameObject.GetComponent<Button>().OnSelect(null); 
             }
-
         }
-            //if(inv.isFull[i] == true)
-            //{
-                 
-            //}
+        return "";
     }
 }
